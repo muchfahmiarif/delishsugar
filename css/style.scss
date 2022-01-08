@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root{
+    --brown: rgb(237, 125, 49);
+    --black: #333;
+    --white: #fff;
+    --light-color: #777;
+    --light-bg: #eee;
+}
+
+*{
+    font-family: 'Poppins', sans-serif, 'Righteous', cursive;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+html{
+    font-size: 62.5%;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+    &::-webkit-scrollbar{
+        width: 1rem;
+    }
+    &::-webkit-scrollbar-track{
+        background: transparent;
+    }
+    &::-webkit-scrollbar-thumb{
+        background: var(--brown);
+        border-radius: 5rem;
+    }
+}
+
+body{
+    background: var(--white);
+}
+
+body.active{
+    --black: #fff;
+    --white: #111;
+    --light-color: #aaa;
+    --light-bg: #222;
+}
+
+section{
+    padding: 3rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    background: var(--light-bg);
+    cursor: pointer;
+    color: var(--black);
+    background: none;
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+    
+    &:hover{
+        background: var(--brown);
+        color: #fff;
+    }
+}
+
+.header{
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--light-bg);
+    display: flex;
+    align-items: center;
+    padding: 2rem 9%;
+    .logo{
+        margin-right: auto;
+        color: var(--brown);
+        font-size: 3rem;
+        font-family: 'Righteous', cursive;
+        text-transform: uppercase;
+    }
+    .navbar a{
+        margin-right: 2rem;
+        font-size: 1.7rem;
+        color: var(--light-color);
+
+        &:hover{
+            color: var(--brown);
+        }
+    }
+    #menu-btn,
+    #theme-btn{
+        font-size: 2.5rem;
+        margin-left: 2rem;
+        cursor: pointer;
+        color: var(--black);
+        &:hover{
+            color: var(--brown);
+        }
+    }
+    #menu-btn{
+        display: none;
+    }
+    #theme-btn.fa-sun{
+        transform: rotate(90deg);
+    }
+}
+
+.home{
+    .box{
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        // margin: auto 5rem;
+        &:nth-child(2){
+            flex-wrap: wrap-reverse;
+            padding: 4rem 0;
+        }
+        .image{
+            flex: 1 1 42rem;
+            img{
+                width: 100%;
+            }
+        }
+        .content{
+            flex: 1 1 42rem;
+            h3{
+                font-size: 3rem;
+                color: var(--black);
+            }
+            p{
+                font-size: 1.5rem;
+                color: var(--light-color);
+                margin: 1rem 0;
+                line-height: 2;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+// media queries
+@media (max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 2rem;
+    }
+    section{
+        padding: 3rem 2rem;
+    }
+}
+@media (max-width: 768px){
+    .header{
+        #menu-btn{
+            display: inline-block;
+            &.fa-times{
+                transform: rotate(180deg);
+            }
+        }
+        .navbar{
+            position: absolute;
+            top: 99%; left: 0; right: 0;
+            background-color: var(--light-bg);
+            clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+            &.active{
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+            a{
+                font-size: 2rem;
+                display: block;
+                margin: 2rem;
+            }
+            
+        }
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+}
