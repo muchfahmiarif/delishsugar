@@ -31,16 +31,27 @@ html{
     overflow: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 8rem;
-    &::-webkit-scrollbar{
-        width: 1rem;
-    }
-    &::-webkit-scrollbar-track{
-        background: transparent;
-    }
-    &::-webkit-scrollbar-thumb{
-        background: var(--brown);
-        border-radius: 5rem;
-    }
+    // &::-webkit-scrollbar{
+    //     width: 1rem;
+    // }
+    // &::-webkit-scrollbar-track{
+    //     background: transparent;
+    // }
+    // &::-webkit-scrollbar-thumb{
+    //     background: var(--brown);
+    //     border-radius: 5rem;
+    // }
+}
+
+::-webkit-scrollbar{
+    width: 1rem;
+}
+::-webkit-scrollbar-track{
+    background: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--brown);
+    border-radius: 5rem;
 }
 
 body{
