@@ -104,7 +104,7 @@ section {
 .heading {
   text-align: center;
   margin-bottom: 3rem;
-  font-size: 3.5rem;
+  font-size: 4rem;
   color: var(--black);
   text-transform: uppercase;
 }
@@ -394,6 +394,13 @@ section {
   font-size: 30px;
   cursor: pointer;
   text-align: center;
+  border-radius: .7rem;
+}
+
+.product .container .next:hover,
+.product .container .prev:hover {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--brown);
 }
 
 .product .container .prev {
@@ -411,8 +418,8 @@ section {
 .contact .icons-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(50rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  -ms-grid-columns: (minmax(0rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(0rem, 1fr));
   gap: 2rem;
 }
 
@@ -440,10 +447,11 @@ section {
 }
 
 .contact .icons-container .icons p {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   color: var(--black);
-  line-height: 0.1 0.5;
+  line-height: 1.5;
   text-transform: lowercase;
+  position: relative;
 }
 
 .contact form {
@@ -473,6 +481,33 @@ section {
 .contact form textarea {
   height: 20rem;
   resize: none;
+}
+
+footer {
+  position: relative;
+  background-color: #ed7d31;
+  color: var(--light-bg);
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 40px;
+  padding-bottom: 40px;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
+footer .text {
+  text-transform: none;
+  float: left;
+  font-size: 1.6rem;
+  padding-left: 20px;
+}
+
+footer .logo {
+  float: right;
+  text-transform: none;
+  font-size: 1.6rem;
+  padding-right: 40px;
 }
 
 @media (max-width: 991px) {

@@ -107,7 +107,7 @@ section{
 .heading{
     text-align: center;
     margin-bottom: 3rem;
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: var(--black);
     text-transform: uppercase;
     span{
@@ -379,6 +379,11 @@ section{
             font-size: 30px;
             cursor: pointer;
             text-align: center;
+            border-radius: .7rem;
+            &:hover{
+                background: rgba(0,0,0,0.03);
+                color: var(--brown);
+            }
         }
         .prev{
             left: 4%;
@@ -392,7 +397,7 @@ section{
 .contact{
     min-height: 100vh;
     .icons-container{
-        @include grid(50rem);
+        @include grid(0rem);
         .icons{
             text-align: center;
             padding: 3rem;
@@ -413,10 +418,11 @@ section{
                 margin-bottom: 1rem;
             }
             p{
-                font-size: 1.5rem;
+                font-size: 1.6rem;
                 color: var(--black);
-                line-height: .1.5;
+                line-height: 1.5;
                 text-transform: lowercase;
+                position: relative;
             }
         }
     }
@@ -447,7 +453,27 @@ section{
     }
 }
 
-
+footer{
+    position: relative;
+    background-color: rgb(237, 125, 49);
+    color: var(--light-bg);
+    bottom: 0; left: 0; right: 0;
+    padding: 20px 40px;
+    padding-bottom: 40px;
+    box-shadow: var(--box-shadow);
+    .text{
+        text-transform: none;
+        float: left;
+        font-size: 1.6rem;
+        padding-left: 20px;
+    }
+    .logo{
+        float: right;
+        text-transform: none;
+        font-size: 1.6rem;
+        padding-right: 40px;
+    }
+}
 
 
 // media queries
