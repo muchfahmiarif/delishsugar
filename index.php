@@ -198,13 +198,68 @@
                 <p>contact@delishsugar.com</p>
             </div>
         </div>
+
+
+        <!-- TABEL FORM CONTACT US -->
         <form action="" method="post">
-            <input type="text" name="name" placeholder="Input Your Name" class="box">
-            <input type="email" name="email" placeholder="Input Your Email" class="box">
-            <input type="text" name="subject" placeholder="Input Your Subject" class="box">
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Input Your Message" class="box"></textarea>
-            <button type="submit" class="btn" name="submit" value="send">send message</button>
+            <!-- <div class="field"> -->
+                <input type="text" name="name" placeholder="Input Your Name" class="box">
+                <!-- <i class="fas fa-user"></i> -->
+            <!-- </div> -->
+            <!-- <div class="field"> -->
+                <input type="email" name="email" placeholder="Input Your Email" class="box">
+                <!-- <i class="fas fa-envelope"></i> -->
+            <!-- </div> -->
+            <!-- <div class="field"> -->
+                <input type="text" name="subject" placeholder="Input Your Subject" class="box">
+                <!-- <i class="fas fa-pen-square"></i> -->
+            <!-- </div> -->
+            <!-- <div class="message"> -->
+                <textarea name="message" id="" cols="30" rows="10" placeholder="Input Your Message" class="box"></textarea>
+                <!-- <i class="far fa-comment-dots"></i> -->
+            <!-- </div> -->
+            <div class="button-area">
+                <button type="submit" class="btn" name="submit" value="send">send message</button>
+                <span>Sending your message...</span>
+            </div>
+            
         </form>
+
+        <!-- <div class="wrapper">
+            <h3>send us message</h3>
+            <form action="#">
+                <div class="dbl-field">
+
+                    <div class="field">
+                        <input type="text" placeholder="Enter Your Name">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="field">
+                        <input type="email" placeholder="Enter Your Email">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Enter Your Subject">
+                        <i class="fas fa-pen-square"></i>
+                    </div>
+                    <div class="field">
+                        <input type="text" placeholder="Enter Your Phone Number">
+                        <i class="fas fa-phone"></i>
+                    </div>
+
+                </div>
+                <div class="message">
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Write Your Message"></textarea>
+                    <i class="far fa-comment-dots"></i>
+                </div>
+                <div class="button-area">
+                    <button class="submit">Send Message</button>
+                    <span>Sending your message...</span>
+                </div>
+            </form> -->
+        </div>
+
+
     </section>
     <!-- contact section ends -->
     <!-- credit section -->

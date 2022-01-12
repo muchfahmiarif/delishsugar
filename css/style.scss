@@ -73,7 +73,6 @@ section{
     color: var(--black);
     font-size: 1.7rem;
     padding: 1rem 3rem;
-    
     &:hover{
         background: var(--brown);
         color: #fff;
@@ -450,7 +449,40 @@ section{
             height: 20rem;
             resize: none;
         }
+        .button-area{
+            display: flex;
+            align-items: center;
+            span{
+                margin-left: 1rem;
+                margin-top: -50%;
+                margin-bottom: -50%;
+                color: var(--brown);
+                display: none;
+                font-size: 1.6rem;
+            }
+        }
     }
+
+    // .wrapper{
+    //     max-width: 78rem;
+    //     display: flex;
+    //     margin: 1rem auto;
+    //     border-radius: .5rem;
+    //     padding: 2rem;
+    //     border: var(--border-btn-2);
+    //     form{
+    //         .dbl-field{
+    //             display: flex;
+    //             justify-content: space-between;
+    //             align-items: center;
+    //             margin-bottom: 2rem;
+    //             .field{
+    //                 height: 2rem;
+    //                 width: calc(100% / 2 - 13px);
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 footer{
@@ -512,9 +544,58 @@ footer{
             
         }
     }
+    footer{
+        .text{
+            padding-left: 5px;
+        }
+        .logo{
+            padding-right: 5px;
+        }
+    }
 }
+
+@media (max-width:525px){
+    .contact{
+        .icons-container{
+            .icons{
+                p{
+                    font-size: 130%;
+                }
+            }
+        }
+    }
+    footer{
+        .text{
+            font-size: 1.2rem;
+        }
+        .logo{
+            font-size: 1.2rem;
+        }
+    }
+}
+
 @media (max-width: 450px){
     html{
         font-size: 50%;
+    }
+}
+
+@media (max-width:385px){
+    .contact{
+        .icons-container{
+            .icons{
+                p{
+                    font-size: 110%;
+                }
+            }
+        }
+    }
+    footer{
+        .text{
+            font-size: .9rem;
+        }
+        .logo{
+            font-size: .9rem;
+        }
     }
 }
