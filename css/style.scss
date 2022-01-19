@@ -4,9 +4,9 @@
 :root{
     --brown: rgb(237, 125, 49);
     --black: #333;
-    --white: #fff;
+    --white: rgb(233, 233, 233);
     --light-color: #777;
-    --light-bg: #eee;
+    --light-bg: rgb(224, 224, 224);
     --border: .1rem solid rgba(0, 0, 0, 0.2);
     --border-btn-2: .1rem solid rgb(237,125,49);
     --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.1);
@@ -55,9 +55,9 @@ body{
 
 body.active{
     --black: #fff;
-    --white: #111;
+    --white: #333;
     --light-color: #aaa;
-    --light-bg: #222;
+    --light-bg: #444;
 }
 
 section{
@@ -101,8 +101,6 @@ section{
     }
 }
 
-
-
 .heading{
     text-align: center;
     margin-bottom: 3rem;
@@ -119,14 +117,19 @@ section{
 }
 
 .header{
-    position: sticky;
+    position: fixed;
     top: 0; left: 0; right: 0;
     z-index: 100;
     background: var(--light-bg);
     display: flex;
     align-items: center;
-    box-shadow: var(--box-shadow);
     padding: 2rem 9%;
+    transition: 1s;
+    .sticky{
+        background: var(--light-bg);
+        padding: 2rem 9%;
+        color: var(--light-bg);
+    }
     .logo{
         margin-right: auto;
         color: var(--brown);
@@ -138,7 +141,6 @@ section{
         margin-right: 2rem;
         font-size: 1.7rem;
         color: var(--light-color);
-
         &:hover{
             color: var(--brown);
         }
@@ -344,21 +346,38 @@ section{
                     img{
                         width: 100%;
                     }
+                    animation: fadeIn .5s linear;
+                }
+                @keyframes fadeIn {
+                    0%{
+                        transform: scale(.5);
+                    }
                 }
                 .content{
                     flex: 1 1 42rem;
                     h3{
                         font-size: 3rem;
                         color: var(--black);
+                        animation: animate .7s linear;
                     }
                     p{
                         font-size: 1.5rem;
                         color: var(--light-color);
                         margin: 1rem 0;
                         line-height: 2;
+                        animation: animate .7s linear;
                     }
                     .btn{
                         margin-right: 3rem;
+                        animation: animate .7s linear;
+                    }
+                    .btn-2{
+                        animation: animate .7s linear;
+                    }
+                    @keyframes animate {
+                        0%{
+                            transform: scale(.1);
+                        }
                     }
                 }
             }
@@ -462,29 +481,55 @@ section{
             }
         }
     }
+}
 
-    // .wrapper{
-    //     max-width: 78rem;
-    //     display: flex;
-    //     margin: 1rem auto;
-    //     border-radius: .5rem;
-    //     padding: 2rem;
-    //     border: var(--border-btn-2);
-    //     form{
-    //         .dbl-field{
-    //             display: flex;
-    //             justify-content: space-between;
-    //             align-items: center;
-    //             margin-bottom: 2rem;
-    //             .field{
-    //                 height: 2rem;
-    //                 width: calc(100% / 2 - 13px);
-    //             }
-    //         }
-    //     }
+#backtotop{
+    z-index: 1000;
+    display: inline-block;
+    position: fixed;
+    // visibility: hidden;
+    bottom: 20px; right: 20px;
+    width: 36px; height: 36px;
+    line-height: 36px;
+    font-size: 16px;
+    text-align: center;
+    opacity: .9;
+    i{
+        display: block;
+        width: 100%; height: 100%;
+        line-height: inherit;
+    }
+    // .visible{
+    //     visibility: visible;
+    //     opacity: 1;
+    //     background: var(--brown);
     // }
 }
 
+.social{
+    z-index: 1000;
+    display: inline-block;
+    position: fixed;
+    bottom: 2rem; right: 2rem;
+    padding: .3rem 2rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    word-spacing: 10%;
+    text-align: center;
+    border-radius: 2rem;
+    border: .1rem solid rgb(37, 211, 102);
+    background: rgb(37, 211, 102);
+    i{
+        width: 100%; height: 100%;
+        color: var(--white);
+    }
+    &:hover{
+        background: var(--border-btn-2);
+        i{
+            color: var(--black);
+        }
+    }
+}
 footer{
     position: relative;
     background-color: rgb(237, 125, 49);

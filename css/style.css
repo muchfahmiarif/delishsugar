@@ -3,9 +3,9 @@
 :root {
   --brown: rgb(237, 125, 49);
   --black: #333;
-  --white: #fff;
+  --white: rgb(233, 233, 233);
   --light-color: #777;
-  --light-bg: #eee;
+  --light-bg: rgb(224, 224, 224);
   --border: .1rem solid rgba(0, 0, 0, 0.2);
   --border-btn-2: .1rem solid rgb(237,125,49);
   --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.1);
@@ -52,9 +52,9 @@ body {
 
 body.active {
   --black: #fff;
-  --white: #111;
+  --white: #333;
   --light-color: #aaa;
-  --light-bg: #222;
+  --light-bg: #444;
 }
 
 section {
@@ -118,8 +118,7 @@ section {
 }
 
 .header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -131,9 +130,15 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-shadow: var(--box-shadow);
-          box-shadow: var(--box-shadow);
   padding: 2rem 9%;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.header .sticky {
+  background: var(--light-bg);
+  padding: 2rem 9%;
+  color: var(--light-bg);
 }
 
 .header .logo {
@@ -350,10 +355,26 @@ section {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 42rem;
           flex: 1 1 42rem;
+  -webkit-animation: fadeIn .5s linear;
+          animation: fadeIn .5s linear;
 }
 
 .product .container .slide-container .slide .image img {
   width: 100%;
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
 }
 
 .product .container .slide-container .slide .content {
@@ -365,6 +386,8 @@ section {
 .product .container .slide-container .slide .content h3 {
   font-size: 3rem;
   color: var(--black);
+  -webkit-animation: animate .7s linear;
+          animation: animate .7s linear;
 }
 
 .product .container .slide-container .slide .content p {
@@ -372,10 +395,33 @@ section {
   color: var(--light-color);
   margin: 1rem 0;
   line-height: 2;
+  -webkit-animation: animate .7s linear;
+          animation: animate .7s linear;
 }
 
 .product .container .slide-container .slide .content .btn {
   margin-right: 3rem;
+  -webkit-animation: animate .7s linear;
+          animation: animate .7s linear;
+}
+
+.product .container .slide-container .slide .content .btn-2 {
+  -webkit-animation: animate .7s linear;
+          animation: animate .7s linear;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
+}
+
+@keyframes animate {
+  0% {
+    -webkit-transform: scale(0.1);
+            transform: scale(0.1);
+  }
 }
 
 .product .container .next,
@@ -499,6 +545,57 @@ section {
   color: var(--brown);
   display: none;
   font-size: 1.6rem;
+}
+
+#backtotop {
+  z-index: 1000;
+  display: inline-block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  text-align: center;
+  opacity: .9;
+}
+
+#backtotop i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: inherit;
+}
+
+.social {
+  z-index: 1000;
+  display: inline-block;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  padding: .3rem 2rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  word-spacing: 10%;
+  text-align: center;
+  border-radius: 2rem;
+  border: 0.1rem solid #25d366;
+  background: #25d366;
+}
+
+.social i {
+  width: 100%;
+  height: 100%;
+  color: var(--white);
+}
+
+.social:hover {
+  background: var(--border-btn-2);
+}
+
+.social:hover i {
+  color: var(--black);
 }
 
 footer {

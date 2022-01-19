@@ -15,6 +15,9 @@
     <!-- javascript link -->
     <script src="js/script.js" defer></script>
 
+    <!-- link jquery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+
     <link rel="shortcut icon" href="ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="ico/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114x114.png" />
@@ -58,7 +61,7 @@
     <!-- header section ends -->
 
     <!-- home section starts -->
-    <section class="home" id="home">
+    <!-- <section class="home" id="home">
         <div class="box">
             <div class="image">
                 <img src="image/home-removebg.png" alt="Delish Sugar Karomah" title="Home">
@@ -69,8 +72,21 @@
                 <a href="#" class="btn">read more</a>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- home section ends -->
+
+    <!-- home section 2 starts -->
+    <section class="showcase" id="home">
+		<div class="video-container">
+		<video src="vid/Drone View - Coconut Tree 2.mp4" autoplay muted loop></video>
+		</div>
+		<div class="content">
+			<h1>Shoot For The Stars</h1>
+			<h3>Full screen video landing page</h3>
+			<a href="#about" class="btn">Read More</a>
+		</div>
+	</section>
+    <!-- home section 2 ends -->
 
     <!-- about section starts -->
     <section class="about" id="about">
@@ -145,7 +161,7 @@
                         <h3>delish sugar karomah</h3>
                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi optio possimus amet, ullam sunt corrupti vel culpa in quae nemo voluptatum quod corporis atque maxime expedita aut consectetur sint unde.</p>
                         <a href="#" class="btn">learn more</a>
-                        <a href="#" class="btn-2">contact us <i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="btn-2"> contact us <i class="fab fa-whatsapp"></i></a>
                     </div>
                     <div class="image">
                         <img src="image/home-removebg.png" alt="Delish Sugar Karomah" title="Home">
@@ -199,71 +215,33 @@
             </div>
         </div>
 
-
         <!-- TABEL FORM CONTACT US -->
-        <form action="" method="post">
-            <!-- <div class="field"> -->
+        <form action="#" method="post">
+            <div class="field">
                 <input type="text" name="name" placeholder="Input Your Name" class="box">
-                <!-- <i class="fas fa-user"></i> -->
-            <!-- </div> -->
-            <!-- <div class="field"> -->
+            </div>
+            <div class="field">
                 <input type="email" name="email" placeholder="Input Your Email" class="box">
-                <!-- <i class="fas fa-envelope"></i> -->
-            <!-- </div> -->
-            <!-- <div class="field"> -->
+            </div>
+            <div class="field">
                 <input type="text" name="subject" placeholder="Input Your Subject" class="box">
-                <!-- <i class="fas fa-pen-square"></i> -->
-            <!-- </div> -->
-            <!-- <div class="message"> -->
+            </div>
+            <div class="message">
                 <textarea name="message" id="" cols="30" rows="10" placeholder="Input Your Message" class="box"></textarea>
-                <!-- <i class="far fa-comment-dots"></i> -->
-            <!-- </div> -->
+            </div>
             <div class="button-area">
                 <button type="submit" class="btn" name="submit" value="send">send message</button>
                 <span>Sending your message...</span>
             </div>
-            
         </form>
-
-        <!-- <div class="wrapper">
-            <h3>send us message</h3>
-            <form action="#">
-                <div class="dbl-field">
-
-                    <div class="field">
-                        <input type="text" placeholder="Enter Your Name">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="field">
-                        <input type="email" placeholder="Enter Your Email">
-                        <i class="fas fa-envelope"></i>
-                    </div>
-                    <div class="field">
-                        <input type="text" placeholder="Enter Your Subject">
-                        <i class="fas fa-pen-square"></i>
-                    </div>
-                    <div class="field">
-                        <input type="text" placeholder="Enter Your Phone Number">
-                        <i class="fas fa-phone"></i>
-                    </div>
-
-                </div>
-                <div class="message">
-                    <textarea name="message" id="" cols="30" rows="10" placeholder="Write Your Message"></textarea>
-                    <i class="far fa-comment-dots"></i>
-                </div>
-                <div class="button-area">
-                    <button class="submit">Send Message</button>
-                    <span>Sending your message...</span>
-                </div>
-            </form> -->
-        </div>
-
-
     </section>
     <!-- contact section ends -->
+
+    <!-- section social media starts -->
+        <a href="https://api.whatsapp.com/send?phone=6281291517036" target="_blank" class="social"><i class="fab fa-whatsapp"> Call Us Now</i></a>
+    <!-- section social media ends -->
+
     <!-- credit section -->
-    <!-- <div class="credits"><i class="far fa-copyright"></i> 2022<span>Delish Sugar Karomah</span> All Right Reserved</div> -->
     <footer>
         <div class="text">
             Made with <span><i class="far fa-heart"></i></span> in Indonesia
@@ -272,5 +250,7 @@
             <i class="far fa-copyright"></i> 2022 Delish Sugar Karomah
         </div>
     </footer>
+    <script src="js/script.js" type="text/javascript"></script>
+
 </body>
 </html>
