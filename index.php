@@ -61,32 +61,25 @@
     <!-- header section ends -->
 
     <!-- home section starts -->
-    <!-- <section class="home" id="home">
+    <section class="home" id="home">
         <div class="box">
-            <div class="image">
-                <img src="image/home-removebg.png" alt="Delish Sugar Karomah" title="Home">
-            </div>
             <div class="content">
                 <h3>delish sugar karomah</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi optio possimus amet, ullam sunt corrupti vel culpa in quae nemo voluptatum quod corporis atque maxime expedita aut consectetur sint unde.</p>
                 <a href="#" class="btn">read more</a>
             </div>
+            <div class="image">
+                <video class="video-slide" src="vid/Drone View - Coconut Tree 2.mp4" muted loop autoplay></video>
+                <!-- <img src="image/home-removebg.png" alt="Delish Sugar Karomah" title="Home"> -->
+            </div>
         </div>
-    </section> -->
+        <!-- <div class="svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path d="M0,224L48,192C96,160,192,96,288,85.3C384,75,480,117,576,154.7C672,192,768,224,864,208C960,192,1056,128,1152,101.3C1248,75,1344,85,1392,90.7L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
+            </svg>  
+        </div> -->
+    </section>
     <!-- home section ends -->
-
-    <!-- home section 2 starts -->
-    <section class="showcase" id="home">
-		<div class="video-container">
-		<video src="vid/Drone View - Coconut Tree 2.mp4" autoplay muted loop></video>
-		</div>
-		<div class="content">
-			<h1>Shoot For The Stars</h1>
-			<h3>Full screen video landing page</h3>
-			<a href="#about" class="btn">Read More</a>
-		</div>
-	</section>
-    <!-- home section 2 ends -->
 
     <!-- about section starts -->
     <section class="about" id="about">
@@ -97,6 +90,42 @@
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi optio possimus amet, ullam sunt corrupti vel culpa in quae nemo voluptatum quod corporis atque maxime expedita aut consectetur sint unde.</p>
                 <a href="#" class="btn">read more</a>
             </div>
+            <!-- image slider starts -->
+            <!-- <div class="slider">
+                <div class="slides"> -->
+                    <!-- radio button starts -->
+                    <!-- <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3"> -->
+                    <!-- radio button ends -->
+                    <!-- slide image starts -->
+                    <!-- <div class="slide first">
+                        <img src="image/home-removebg.png" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="image/Coconut Sugar 4.jpg" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="image/Gula Aren Grade A 3.jpg" alt="">
+                    </div> -->
+                    <!-- slide image ends -->
+                    <!-- automatic navigation starts -->
+                    <!-- <div class="navigation-auto">
+                        <div class="auto-btn1"></div>
+                        <div class="auto-btn2"></div>
+                        <div class="auto-btn3"></div>
+                    </div> -->
+                    <!-- automatic navigation ends -->
+                <!-- </div> -->
+                <!-- manual navigation starts -->
+                <!-- <div class="navigation-manual">
+                    <label for="radio1" class="manual-btn"></label>
+                    <label for="radio2" class="manual-btn"></label>
+                    <label for="radio3" class="manual-btn"></label>
+                </div> -->
+                <!-- manual navigation ends -->
+            <!-- </div> -->
+            <!-- image slider ends -->
             <div class="image">
                 <img src="image/home-removebg.png" alt="Delish Sugar Karomah" title="Home">
             </div>

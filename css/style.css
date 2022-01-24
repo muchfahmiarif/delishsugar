@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
 :root {
   --brown: rgb(237, 125, 49);
+  --brown2: rgba(237, 125, 49, .5);
   --black: #333;
   --white: rgb(233, 233, 233);
   --light-color: #777;
@@ -44,10 +45,6 @@ html::-webkit-scrollbar-track {
 html::-webkit-scrollbar-thumb {
   background: var(--brown);
   border-radius: 5rem;
-}
-
-body {
-  background: var(--white);
 }
 
 body.active {
@@ -181,7 +178,14 @@ section {
           transform: rotate(90deg);
 }
 
+.home {
+  background: var(--white);
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .home .box {
+  padding: 0rem 9%;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -191,7 +195,7 @@ section {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 2rem;
+  gap: 5rem;
 }
 
 .home .box:nth-child(2) {
@@ -208,6 +212,11 @@ section {
 
 .home .box .image img {
   width: 100%;
+}
+
+.home .box .image video {
+  width: 100%;
+  border-radius: 2rem;
 }
 
 .home .box .content {
@@ -228,6 +237,15 @@ section {
   line-height: 2;
 }
 
+.home .svg path {
+  fill: var(--brown);
+  fill-opacity: .5;
+}
+
+.about {
+  background: var(--white);
+}
+
 .about .box {
   min-height: 100vh;
   display: -webkit-box;
@@ -245,6 +263,32 @@ section {
   -ms-flex-wrap: wrap-reverse;
       flex-wrap: wrap-reverse;
   padding: 4rem 0;
+}
+
+.about .box .slider {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+  overflow: hidden;
+}
+
+.about .box .slider .slides {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 42rem;
+          flex: 1 1 42rem;
+}
+
+.about .box .slider .slides input {
+  display: none;
+}
+
+.about .box .slider .slides .slide {
+  width: 1000%;
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 .about .box .image {
@@ -276,6 +320,7 @@ section {
 }
 
 .features {
+  background: var(--white);
   min-height: 100vh;
 }
 
@@ -326,6 +371,7 @@ section {
 }
 
 .product {
+  background: var(--white);
   position: relative;
 }
 
@@ -458,6 +504,7 @@ section {
 }
 
 .contact {
+  background: var(--white);
   min-height: 100vh;
 }
 

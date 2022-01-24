@@ -3,6 +3,7 @@
 
 :root{
     --brown: rgb(237, 125, 49);
+    --brown2: rgba(237, 125, 49, .5);
     --black: #333;
     --white: rgb(233, 233, 233);
     --light-color: #777;
@@ -50,7 +51,7 @@ html{
 }
 
 body{
-    background: var(--white);
+    // background: var(--white);
 }
 
 body.active{
@@ -125,6 +126,7 @@ section{
     align-items: center;
     padding: 2rem 9%;
     transition: 1s;
+    // border: var(--border);
     .sticky{
         background: var(--light-bg);
         padding: 2rem 9%;
@@ -164,12 +166,15 @@ section{
 }
 
 .home{
+    background: var(--white);
+    padding-left: 0; padding-right: 0;
     .box{
+        padding: 0rem 9%;
         min-height: 100vh;
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        gap: 2rem;
+        gap: 5rem;
         // margin: auto 5rem;
         &:nth-child(2){
             flex-wrap: wrap-reverse;
@@ -179,6 +184,10 @@ section{
             flex: 1 1 42rem;
             img{
                 width: 100%;
+            }
+            video{
+                width: 100%;
+                border-radius: 2rem;
             }
         }
         .content{
@@ -195,9 +204,16 @@ section{
             }
         }
     }
+    .svg{
+        path{
+            fill: var(--brown);
+            fill-opacity: .5;
+        }
+    }
 }
 
 .about{
+    background: var(--white);
     .box{
         min-height: 100vh;
         display: flex;
@@ -207,6 +223,21 @@ section{
         &:nth-child(2){
             flex-wrap: wrap-reverse;
             padding: 4rem 0;
+        }
+        .slider{
+            flex: 1 1 42rem;
+            overflow: hidden;
+            .slides{
+                display: flex;
+                flex: 1 1 42rem;
+                input{
+                    display: none;
+                }
+                .slide{
+                    width: 1000%;
+                    transition: 2s;
+                }
+            }
         }
         .image{
             flex: 1 1 42rem;
@@ -231,6 +262,7 @@ section{
 }
 
 .features{
+    background: var(--white);
     min-height: 100vh;
     .box-container{
         @include grid(31rem);
@@ -273,7 +305,6 @@ section{
 //                 flex-wrap: wrap;
 //                 gap: 2rem;
 //                 margin: auto 5rem;
-                
 //                 .image{
 //                     flex: 1 1 42rem;
 //                     img{
@@ -326,6 +357,7 @@ section{
 }
 
 .product{
+    background: var(--white);
     position: relative;
     .container{
         .slide-container{
@@ -413,6 +445,7 @@ section{
 }
 
 .contact{
+    background: var(--white);
     min-height: 100vh;
     .icons-container{
         @include grid(0rem);
